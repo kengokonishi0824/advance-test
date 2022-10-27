@@ -1,0 +1,60 @@
+.pagination{
+  display: flex;
+  justify-content: space-between;
+}
+
+.page_numbers{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+
+.page_number{
+  width: 20px;
+  height: 20px;
+  border: solid 1px #E9E8E9;
+  text-align: center;
+}
+
+.page_number_now{
+  width: 20px;
+  height: 20px;
+  border:1px solid #E9E8E9;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.page_url{
+  text-decoration: none;
+  color: black;
+}
+
+.opinion_table{
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table_header{
+  border-bottom:3px solid black;
+}
+
+.admin_opinion{
+  background-color: aquamarine;
+  display: block;
+  width: 40ch;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.admin_opinion:hover {
+  white-space: normal;
+}
+
+svg.w-5.h-5 {
+  /*paginateメソッドの矢印の大きさ調整のために追加*/
+  width: 30px;
+  height: 30px;
+}
