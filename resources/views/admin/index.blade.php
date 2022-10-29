@@ -32,7 +32,6 @@
       @elseif($contact->gender==2)
         女性
       @endif
-      {{$contact->gender}}
     </td>
     <td>
       {{$contact->email}}

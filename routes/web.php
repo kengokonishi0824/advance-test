@@ -8,6 +8,6 @@ Route::get('/', [ContactController::class, 'index']);
 //入力ページ
 Route::get('/contact',[ContactController::class, 'contact']);
 //確認ページ
-Route::post('/contact/confirm',[ContactController::class, 'contact.confirm']);
+Route::post('/contact/confirm',[ContactController::class, 'confirm']);
 //送信完了ページ
-Route::post('/contact/thanks', [ContactController::class, 'contact.thanks']);
+Route::post('/contact/create', [ContactController::class, 'create']);
