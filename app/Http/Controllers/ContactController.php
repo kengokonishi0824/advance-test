@@ -16,6 +16,24 @@ class ContactController extends Controller
         return view('admin.index', ['contacts' => $contacts]);
     }
 
+    public function find()
+    {
+        $contacts = [];
+        return view('search', ['fullname' => $fullname, 'gender' => $gender, 'created_at' => $date, 'email' => $email]);
+    }
+
+    public function search(Request $request)
+    {
+        $fullname = $request['fullname'];
+        $gender = $request['gender'];
+        $date_from = $request['date_from'];
+        $date_to = $request['date_to'];
+        $email = $request['email'];
+        $contacts = Contact::doSearch($fullname, $gender, $date_from, $date_to ,$email);
+        
+        return view('admin.search', ['contacts' => $contacts, 'fullname' => $fullname, 'gender' => $gender, 'date_from' => $date_from, 'date_to' => $date_to, 'email' => $email]);
+    }
+
     public function contact()
     {
         return view('contact.contact');
@@ -39,5 +57,19 @@ class ContactController extends Controller
             //送信完了ページのviewを表示
             return view('contact.thanks');
     }
-}
+    }
+
+    public function delete(Request $request)
+    {
+        $todo = Contact::find($request->id);
+        return view('delete', ['form' => $contact]);
+    }
+
+    public function remove(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect("/");
+    }
+
+
 }

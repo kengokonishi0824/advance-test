@@ -1,3 +1,35 @@
+.search_box{
+  border: solid 2px black;
+}
+
+.search_title{
+  width: 15%;
+}
+
+.search_name_gender{
+  display: flex;
+}
+
+.search_date{
+  display: flex;
+}
+
+.search_email{
+  display: flex;
+}
+
+.contact_search{
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  width: 200px;
+  height: 40px;
+}
+
+.admin_button{
+  width: 100%;
+  margin: 0 auto;
+}
+
 .pagination{
   display: flex;
   justify-content: space-between;
@@ -41,7 +73,6 @@
 }
 
 .admin_opinion{
-  background-color: aquamarine;
   display: block;
   width: 40ch;
   white-space: nowrap;
@@ -57,6 +88,17 @@
   color: #CDCDCD;
   font-size: 15px;
 }
+
+.button-delete {
+  background-color: black;
+  color: white;
+  width: 60px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 
 .width_title{
   width: 80%;
@@ -76,18 +118,57 @@
   height: 40px;
 }
 
-.contact_button{
+input[type=radio] {
   display: none;
 }
 
+.contact_radio {
+  position: relative;
+  padding: 10 0 0 60px;
+}
 
+.contact_radio:after,.contact_radio:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+}
+
+.contact_radio:after {
+  left: 15px;
+  margin-top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+.contact_radio:before {
+  left: 27px;
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+input[type=radio]:checked+.contact_radio:before {
+  opacity: 1;
+}
+
+.contact_radio:hover:after {
+  border-color: #0171bd;
+}
 
 .opinion_form{
   border: 1px solid #CDCDCD;
   border-radius: 3px;
   height: 100px;
   width: 100%;
+  text-align: start;
 }
+
 
 .form_title{
   width: 150px;
@@ -116,5 +197,20 @@
   height: 40px;
   border: 1px solid black;
   border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+}
 
+.reset{
+  cursor: pointer;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:13px;
+  text-align:start;
+}
+
+.aka{
+  color: red;
 }

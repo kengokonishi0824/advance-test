@@ -25,16 +25,16 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-        'family_name.required' => 'おい',
-        'first_name.required' => 'おい',
-        'gender.required' => 'おい',
-        'email.email' => 'おいメール',
-        'email.required' => 'おい必須',
-        'postcode.required' => 'おい必須',
-        'postcode.regex' => 'おい全角',
-        'address.required' => 'おい',
-        'opinion.required' => 'おい必須',
-        'opinion.max' => 'おい文字数'
+        'family_name.required' => '必須項目です',
+        'first_name.required' => '必須項目です',
+        'gender.required' => '必須項目です',
+        'email.email' => 'メールの形式で入力ください',
+        'email.required' => '必須項目です',
+        'postcode.required' => '必須項目です',
+        'postcode.regex' => '半角で入力ください',
+        'address.required' => '必須項目です',
+        'opinion.required' => '必須項目です',
+        'opinion.max' => '120文字以内で入力ください'
         ];
     }
 

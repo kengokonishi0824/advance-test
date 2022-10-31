@@ -50,8 +50,8 @@
     郵便番号
     </td>
     <td>
-    {{ $inputs['postcode'] }}
-    <input type="hidden" name="postcode" value="{{ $inputs['postcode'] }}" class="">
+    {{ $inputs['zip'] }}
+    <input type="hidden" name="postcode" value="{{ $inputs['zip'] }}" class="">
     </td>
 </tr>
 <tr class="form_row">
