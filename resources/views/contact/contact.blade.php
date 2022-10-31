@@ -69,7 +69,7 @@
       郵便番号<span class="aka">※</span>
     </td>
     <td colspan="2">
-      〒　<input id="zip" type="text" name="zip" value= "{{ old('postcode') }}" class="contact_form_p">
+      〒　<input id="zip" type="text" name="zip" value= "{{ old('zip') }}" class="contact_form_p">
       <button class="api-address" type="button">住所を自動入力</button>
       @if ($errors->has('postcode'))
             {{$errors->first('postcode')}}
